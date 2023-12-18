@@ -1,3 +1,5 @@
+https://github.com/SquidDev-CC/plethora/blob/minecraft-1.12/src/test/java/org/squiddev/plethora/boostrap/HowlCiStub.java
+
 -------------------------------------------
 Source installation information for modders
 -------------------------------------------
