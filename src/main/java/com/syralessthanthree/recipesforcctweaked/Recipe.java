@@ -189,6 +189,9 @@ public class Recipe{
         List<Point> checkedSizes = new ArrayList<>();
         for(int i = 1; i < recipeLength; i++) {
             for(int j = recipeLength; j >= 1; j--) {
+
+                if(i >= 3 || j >= 3) continue; // TODO make this modular somehow? but for now assume a simple crafting bench
+
                 Point size = new Point(i,j);
                 if(checkedSizes.contains(size)) continue;
                 if(i*j == recipeLength && recipe.canFit(i,j)) possibleSizes.add(size);
@@ -196,7 +199,11 @@ public class Recipe{
             }
         }
 
-        if(possibleSizes.size() == 1){
+        if(!possibleSizes.isEmpty()){
+            if(possibleSizes.size()>1){
+                System.out.println(String.format("Recipe that makes %s has multiple Sizes:",recipe.getRecipeOutput().getItem().getRegistryName().toString()));
+                System.out.println(possibleSizes);
+            }
             return possibleSizes.get(0);
         }else{
             return new Point(-1,-1);
