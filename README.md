@@ -4,8 +4,9 @@ TODO:
     Cache Item Recipes
     
 Planned Features:
-    just get amount needed to craft
-    get amount needed to craft recursively
+    get all ingredients as a simple list
+    get all ingredients recursively from the crafting recipe of the ingredients
+    assume we have all ingredients and craft the given item bottem up
     smelting recipes
     ?more ways to craft?
 
